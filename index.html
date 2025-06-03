@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>锐锐今天吃什么</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f7f7f7;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 36px;
+      color: #333;
+    }
+    #result {
+      font-size: 28px;
+      margin-top: 40px;
+      color: #0077cc;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      background-color: #0077cc;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>锐锐今天吃什么？</h1>
+  <button onclick="getFood()">告诉我！</button>
+  <div id="result"></div>
+
+  <script>
+    const foods = [
+      "牛肉面", "寿司", "火锅", "沙拉", "烧烤", "炸鸡", "披萨", "麻辣烫", "煎饺", "米线", "蛋包饭"
+    ];
+
+    function getFood() {
+      const index = Math.floor(Math.random() * foods.length);
+      const chosen = foods[index];
+      document.getElementById("result").innerText = "今天吃：" + chosen + "！";
+    }
+  </script>
+
+</body>
+</html>
